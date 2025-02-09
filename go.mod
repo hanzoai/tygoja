@@ -1,4 +1,4 @@
-module github.com/pocketbase/tygoja
+module github.com/hanzoai/tygoja
 
 go 1.22.0
 
