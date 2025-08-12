@@ -78,6 +78,9 @@ func (g *PackageGenerator) writeFuncDecl(s *strings.Builder, decl *ast.FuncDecl,
 		case *ast.Ident:
 			recvName = recv.Name
 		case *ast.IndexExpr:
+			if v, ok := recv.X.(*ast.Ident); ok {
+				recvName = v.Name
+			}
 		case *ast.IndexListExpr:
 			if v, ok := recv.X.(*ast.Ident); ok {
 				recvName = v.Name

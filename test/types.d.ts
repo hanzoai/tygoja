@@ -72,9 +72,15 @@ namespace a {
   /**
    * structB comment
    */
-  type _sqJYikd = unexported&structA
-  interface StructB<T> extends _sqJYikd {
+  type _snAOjId = unexported&structA
+  interface StructB<T> extends _snAOjId {
     Field3: T
+  }
+  interface StructB<T> {
+    /**
+     * StructB.Method3 comment
+     */
+    Method3(arg1: number): [number, string]
   }
   /**
    * structC with multiple mixed generic types
